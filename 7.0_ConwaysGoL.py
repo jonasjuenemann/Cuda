@@ -40,6 +40,9 @@ import matplotlib.animation as animation
 #define _HEIGHT ( blockDim.y * gridDim.y )
 //gesamte "Höhe" des Arrays, Anzahl Reihen im Array, bzw. Anzahl Arrays im Array * wie oft diese Reihen untereinander stehen (Anzahl Blocks)
 
+//Dieser ganze Bereichnigungsschritt ist nur noetig, weil wir bei der Bestimmung der Nachbarn mitunter von x+1 bzw. y+1 bestimmen.
+//wenn wir vom Ende des Grids machen, gaebe es aber keine Nachbarn mehr, da die entsprechende threadIdx.x nicht exisitert.
+//So wird hier auf der anderen Seite des Arrayblocks wieder angesetzt
 #define _XM(x)  ( (x + _WIDTH) % _WIDTH )
 //Bereignigter threadIndex in seinem jeweiligen block
 #define _YM(y)  ( (y + _HEIGHT) % _HEIGHT )

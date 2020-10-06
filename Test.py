@@ -34,5 +34,9 @@ def matrix_mult(a_matrix, b_matrix):
 
 
 print(matrix_mult(x, y))
-x = np.array([[1, 2, 3, 4], [7, 8, 9]])
-print(matrix_mult(x, y))
+# x = np.array([[1, 2, 3, 4], [7, 8, 9]])
+#print(matrix_mult(x, y))
+
+#print(np.random.randn(1024))
+# matmul von numpy bildet matrizenprodukte
+print(np.matmul(x, y))
