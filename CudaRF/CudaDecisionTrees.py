@@ -7,42 +7,25 @@ import pycuda.driver as drv
 from pycuda import gpuarray
 from pycuda.compiler import SourceModule
 import numpy as np
+from cpu_impl import change_data, change_labels
 
-cars = [['med', 'low', '3', '4', 'med', 'med'], ['med', 'vhigh', '4', 'more', 'small', 'high'],
-        ['high', 'med', '3', '2', 'med', 'low'], ['med', 'low', '4', '4', 'med', 'low'],
-        ['med', 'low', '5more', '2', 'big', 'med'], ['med', 'med', '2', 'more', 'big', 'high'],
-        ['med', 'med', '2', 'more', 'med', 'med'], ['vhigh', 'vhigh', '2', '2', 'med', 'low'],
-        ['high', 'med', '4', '2', 'big', 'low'], ['low', 'low', '2', '4', 'big', 'med']]
-cars = cars_1
-# car_labels = ['acc', 'acc', 'unacc', 'unacc', 'unacc', 'vgood', 'acc', 'unacc', 'unacc', 'good']
-car_labels = car_labels_1
 cars_dict = {0: "Buying Price", 1: "Price of maintenance", 2: "Number of doors", 3: "Person Capacity",
                      4: "Size of luggage boot", 5: "Estimated Saftey"}
 
-# Die Arrays waeren zu GPUarrays umwandelbar, man muesste allerdings aufpassen, dass diese dann ihre zweite Dimension verlieren.
 
-def change_data(data):
-    dicts = [{'vhigh': 1.0, 'high': 2.0, 'med': 3.0, 'low': 4.0},
-             {'vhigh': 1.0, 'high': 2.0, 'med': 3.0, 'low': 4.0},
-             {'2': 1.0, '3': 2.0, '4': 3.0, '5more': 4.0},
-             {'2': 1.0, '4': 2.0, 'more': 3.0},
-             {'small': 1.0, 'med': 2.0, 'big': 3.0},
-             {'low': 1.0, 'med': 2.0, 'high': 3.0}]
-    for row in data:
-        for i in range(len(dicts)):  # len(dicts) = 6 da fuer jedes feature eine Anpassung
-            row[i] = dicts[i][row[i]]
-    return data
+"""Decision Trees mithilfe von PyCuda"""
 
-def change_labels(labels):
-    dict = {"unacc": 1.0, "acc":2.0, "good":3.0, "vgood":4.0}
-    for i in range(len(labels)):
-        labels[i] = dict[labels[i]]
-    return labels
+car_data = change_data(cars_1)
+car_labels = change_labels(car_labels_1)
 
-car_data = change_data(cars)
-#car_labels = change_labels(car_labels)
+car_data = np.array(car_data).astype(np.float32)
+car_labels = np.array(car_labels).astype(np.float32)
 
-"""Pure Python Variante:"""
+car_data_d = gpuarray.to_gpu(car_data)
+car_labels_d = gpuarray.to_gpu(car_labels)
+
+ker = SourceModule("""
+""")
 
 class Leaf:
     def __init__(self, labels, value):
@@ -59,6 +42,27 @@ class Internal_Node:
         self.branches = branches
         self.value = value
 
+"""
+Ueberlegungen:
+- Arrays in den Funktionen in GPUarrays umwandeln
+
+"""
+def gini(dataset):
+    impurity = 1
+    label_counts = Counter(dataset)
+    for label in label_counts:
+        prob_of_label = label_counts[label] / len(dataset)
+        impurity -= prob_of_label ** 2
+    return impurity
+
+
+def information_gain(starting_labels, split_labels):
+    info_gain = gini(starting_labels)
+    for subset in split_labels:
+        info_gain -= gini(subset) * len(subset) / len(starting_labels)
+    return info_gain
+
+
 def split(dataset, labels, column):
     data_subsets = []
     label_subsets = []
@@ -74,22 +78,6 @@ def split(dataset, labels, column):
         data_subsets.append(new_data_subset)
         label_subsets.append(new_label_subset)
     return data_subsets, label_subsets
-
-
-def gini(dataset):
-    impurity = 1
-    label_counts = Counter(dataset)
-    for label in label_counts:
-        prob_of_label = label_counts[label] / len(dataset)
-        impurity -= prob_of_label ** 2
-    return impurity
-
-
-def information_gain(starting_labels, split_labels):
-    info_gain = gini(starting_labels)
-    for subset in split_labels:
-        info_gain -= gini(subset) * len(subset) / len(starting_labels)
-    return info_gain
 
 
 def find_best_split(dataset, labels):
@@ -110,27 +98,23 @@ def build_tree(data, labels, value=""):
     data_subsets, label_subsets = split(data, labels, best_feature)
     branches = []
     for i in range(len(data_subsets)):
-        """Als Value wird hier das beste Feature zum Teilen gegeben, sehr Praktisch, da man dies in jeder Internal node dann 
-        speichert was dazu fuehrt, dass man dieses rauspicken kann."""
         branch = build_tree(data_subsets[i], label_subsets[i], data_subsets[i][0][best_feature])
         branches.append(branch)
     return Internal_Node(best_feature, branches, value)
 
 
 def print_tree(node, question_dict, spacing=""):
-    """World's most elegant tree printing function."""
     # Base case: we've reached a leaf
     if isinstance(node, Leaf):
         print(spacing + str(node.labels))
         return
-
     # Print the question at this node
     print(spacing + "Splitting on " + str(question_dict[node.feature]))
-
     # Call this function recursively on the true branch
     for i in range(len(node.branches)):
         print(spacing + '--> Branch ' + str(node.branches[i].value) + ':')
         print_tree(node.branches[i], question_dict, spacing + "  ")
+
 
 def classify(datapoint, tree):
     if isinstance(tree, Leaf):
@@ -146,61 +130,5 @@ def classify(datapoint, tree):
         if branch.value == value:
             return classify(datapoint, branch)
 
-
-
-tree = build_tree(cars, car_labels)
-print_tree(tree, cars_dict)
-
-training_data = car_data[:int(len(car_data) * 0.8)]
-training_labels = car_labels[:int(len(car_data) * 0.8)]
-
-testing_data = car_data[int(len(car_data) * 0.8):]
-testing_labels = car_labels[int(len(car_data) * 0.8):]
-
-tree = build_tree(training_data, training_labels)
-single_tree_correct = 0.0
-
-#test a single tree for accuracy of its predictions for the test set
-for i in range(len(testing_data)):
-    prediction = classify(testing_data[i], tree)
-    #print(prediction)
-    #print(testing_labels[i])
-    #print(prediction == testing_labels[i])
-    if prediction == testing_labels[i]:
-        single_tree_correct += 1
-print("Percentage of the test_set a single tree predicted accurately")
-print(single_tree_correct / len(testing_data))
-
-
-#Random Forest als Pure Python
-
-
-def make_random_forest(n, training_data, training_labels):
-    trees = []
-    for i in range(n):
-        indices = [random.randint(0, len(training_data) - 1) for x in range(len(training_data))]
-
-        training_data_subset = [training_data[index] for index in indices]
-        training_labels_subset = [training_labels[index] for index in indices]
-
-        tree = build_tree(training_data_subset, training_labels_subset)
-        trees.append(tree)
-    return trees
-
-forest = make_random_forest(40, training_data, training_labels)
-#test a whole forest for accuracy of its predictions for the test set
-forest_correct = 0.0
-for i in range(len(testing_data)):
-    predictions = []
-    for forest_tree in forest:
-        predictions.append(classify(testing_data[i], forest_tree))
-    forest_prediction = max(predictions, key=predictions.count)
-    if forest_prediction == testing_labels[i]:
-        forest_correct += 1
-
-print("Prediction des forests")
-print(forest_correct / len(testing_data))
-
-
-
-"""Decision Trees mithilfe von PyCuda"""
+ker = SourceModule("""
+""")

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437d6385-1429-4b52-9e67-fa42fc4e73f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/9.0_CUDASerial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7.0_ConwaysGoL.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.0_ConwaysGoL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7.1_GoFThreadSynchonization.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.1_GoLThreadSynchonization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7.2_GoFTS&amp;SharedMemory.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.2_GoLTS&amp;SharedMemory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9_CUDAstreams.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" beforeDir="false" afterPath="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/DecisionTrees.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/RandomForest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/data_car.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/tree_w_features.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mandelbrot.png" beforeDir="false" afterPath="$PROJECT_DIR$/mandelbrot.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,26 +53,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MachineLearning" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda\CudaRF" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda\CudaRF\cudatree" />
       <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda\CudaRF" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.CudaDecisionTrees">
+  <component name="RunManager" selected="Python.7.0_ConwaysGoL">
     <configuration name="12.1_BrokenMatrixDebugging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -88,20 +85,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="CudaDecisionTrees" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="13.1_cuFFT_2DConvolution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CudaRF" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/13.1_cuFFT_2DConvolution.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DecisionTrees" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="13_cublas (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,12 +112,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CudaRF" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CudaRF/DecisionTrees.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/13_cublas.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,20 +126,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RandomForest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="7.0_ConwaysGoL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CudaRF" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CudaRF/RandomForest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7.0_ConwaysGoL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +167,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tree_w_features" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="conv_2d" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -184,12 +175,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CudaRF" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Literatur/Chapter07" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CudaRF/tree_w_features.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Literatur/Chapter07/conv_2d.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -200,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.CudaDecisionTrees" />
-        <item itemvalue="Python.RandomForest" />
-        <item itemvalue="Python.tree_w_features" />
-        <item itemvalue="Python.DecisionTrees" />
+        <item itemvalue="Python.7.0_ConwaysGoL" />
+        <item itemvalue="Python.13.1_cuFFT_2DConvolution" />
         <item itemvalue="Python.12.1_BrokenMatrixDebugging" />
+        <item itemvalue="Python.13_cublas (1)" />
+        <item itemvalue="Python.conv_2d" />
       </list>
     </recent_temporary>
   </component>
@@ -263,6 +254,13 @@
       <workItem from="1601834697215" duration="4037000" />
       <workItem from="1601910456668" duration="5818000" />
       <workItem from="1601990239807" duration="24518000" />
+      <workItem from="1602021584119" duration="4724000" />
+      <workItem from="1602026332949" duration="934000" />
+      <workItem from="1602027419137" duration="428000" />
+      <workItem from="1602027860127" duration="533000" />
+      <workItem from="1602028411812" duration="3809000" />
+      <workItem from="1602032249841" duration="4008000" />
+      <workItem from="1602067918401" duration="2760000" />
     </task>
     <servers />
   </component>
@@ -284,15 +282,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601995849175" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602004254771">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602023416623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602004254771" />
-    <state x="628" y="171" key="FileChooserDialogImpl" timestamp="1602007150778">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602023416623" />
+    <state x="628" y="171" key="FileChooserDialogImpl" timestamp="1602033575364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-636" y="268" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1600858651461" />
-    <state x="628" y="171" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602007150778" />
+    <state x="628" y="171" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602033575364" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1599089685331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -333,20 +331,20 @@
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597363633516" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685332" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1602020324359">
+    <state x="461" y="162" key="SettingsEditor" timestamp="1602032331466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1459" y="162" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601857142070" />
-    <state x="461" y="162" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602020324359" />
+    <state x="461" y="162" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602032331466" />
     <state x="480" y="224" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1599360710101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="480" y="224" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599360710101" />
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1601990280107">
+    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1602067919609">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601910490098" />
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601990280107" />
+    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602067919609" />
+    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602032252470" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601997090877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

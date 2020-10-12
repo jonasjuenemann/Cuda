@@ -1,4 +1,5 @@
 import numpy as np
+from collections import Counter
 
 x = np.array([[1, 2, 3], [7, 8, 9]])
 y = np.array([[1, 2], [3, 4], [5, 6]])
@@ -40,3 +41,5 @@ print(matrix_mult(x, y))
 #print(np.random.randn(1024))
 # matmul von numpy bildet matrizenprodukte
 print(np.matmul(x, y))
+
+#print(Counter(Counter([7,8,6,4,4,3,54,6]))) aendert nix
