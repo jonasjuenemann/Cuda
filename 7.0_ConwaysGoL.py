@@ -21,7 +21,7 @@ import matplotlib.animation as animation
 # with the constant values that are given by blockIdx.x , blockIdx.y, (and blockIdx.z)
 
 """Conway's GameOfLife in a GPU Implementation"""
-
+6
 # start by using the C language's #define directive to set up some constants and macros that we'll use throughout the kernel.
 # Let's look at the first two we'll set up, _X and _Y
 # #define -> it will literally replace any text of _X or _Y with the defined values

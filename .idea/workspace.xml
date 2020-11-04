@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="437d6385-1429-4b52-9e67-fa42fc4e73f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" beforeDir="false" afterPath="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/DecisionTrees.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/RandomForest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/data_car.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/tree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/tree_w_features.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7.0_ConwaysGoL.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.0_ConwaysGoL.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MachineLearning" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bachelorarbeit" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -65,11 +59,14 @@
       <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda\CudaRF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.7.0_ConwaysGoL">
+  <component name="RunManager" selected="Python.7_GoLSpeedCuda">
     <configuration name="12.1_BrokenMatrixDebugging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -89,6 +86,9 @@
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -104,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="13_cublas (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="3.1_TimeCalc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -117,7 +117,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/13_cublas.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3.1_TimeCalc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,6 +130,9 @@
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -137,6 +140,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7.0_ConwaysGoL.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="7_GoLSpeedCuda" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Cuda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7_GoLSpeedCuda.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,35 +192,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="conv_2d" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Cuda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Literatur/Chapter07" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Literatur/Chapter07/conv_2d.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.7_GoLSpeedCuda" />
+        <item itemvalue="Python.3.1_TimeCalc" />
         <item itemvalue="Python.7.0_ConwaysGoL" />
         <item itemvalue="Python.13.1_cuFFT_2DConvolution" />
         <item itemvalue="Python.12.1_BrokenMatrixDebugging" />
-        <item itemvalue="Python.13_cublas (1)" />
-        <item itemvalue="Python.conv_2d" />
       </list>
     </recent_temporary>
   </component>
@@ -261,6 +264,22 @@
       <workItem from="1602028411812" duration="3809000" />
       <workItem from="1602032249841" duration="4008000" />
       <workItem from="1602067918401" duration="2760000" />
+      <workItem from="1602529671346" duration="2116000" />
+      <workItem from="1602595258974" duration="1352000" />
+      <workItem from="1602699718840" duration="8114000" />
+      <workItem from="1603036117665" duration="1991000" />
+      <workItem from="1603117958792" duration="1197000" />
+      <workItem from="1603129360565" duration="3858000" />
+      <workItem from="1603152274083" duration="891000" />
+      <workItem from="1603200847242" duration="68000" />
+      <workItem from="1603201103463" duration="26000" />
+      <workItem from="1603241812020" duration="1039000" />
+      <workItem from="1603277434143" duration="3550000" />
+      <workItem from="1604249823987" duration="6377000" />
+      <workItem from="1604268403153" duration="20000" />
+      <workItem from="1604446317879" duration="486000" />
+      <workItem from="1604449907319" duration="677000" />
+      <workItem from="1604490129176" duration="228000" />
     </task>
     <servers />
   </component>
@@ -286,11 +305,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602023416623" />
-    <state x="628" y="171" key="FileChooserDialogImpl" timestamp="1602033575364">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1120" y="250" key="FileChooserDialogImpl" timestamp="1604490356761">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-636" y="268" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1600858651461" />
-    <state x="628" y="171" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602033575364" />
+    <state x="-1120" y="250" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604490356761" />
+    <state x="628" y="171" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603242859605" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1599089685331">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -340,14 +359,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="480" y="224" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599360710101" />
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1602067919609">
+    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1604490129170">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1602067919609" />
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602032252470" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1601997090877">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604490129170" />
+    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603200870025" />
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603277434376">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603277434376" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601997090877" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
