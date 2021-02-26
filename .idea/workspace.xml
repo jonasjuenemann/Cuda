@@ -4,6 +4,18 @@
     <list default="true" id="437d6385-1429-4b52-9e67-fa42fc4e73f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/7.0_ConwaysGoL.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.0_ConwaysGoL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7_GoLSpeedCuda.py" beforeDir="false" afterPath="$PROJECT_DIR$/7_GoLSpeedCuda.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/cpu_impl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/base_tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/datasource.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/random_forest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/random_tree.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CudaRF/data_cars.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOfLife/board.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOfLife/cell.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameOfLife/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +36,6 @@
     <expand />
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Cuda" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -37,17 +46,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="05a40eb6-40d1-4db4-8ca5-ace6910d3efc" />
   <component name="ProjectId" id="1g3ygka9kvkoTyj4CazK6Bnquf4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bachelorarbeit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -60,28 +72,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.7_GoLSpeedCuda">
-    <configuration name="12.1_BrokenMatrixDebugging" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Cuda" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/12.1_BrokenMatrixDebugging.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="13.1_cuFFT_2DConvolution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +86,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/13.1_cuFFT_2DConvolution.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="2_deviceQuery" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Cuda" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2_deviceQuery.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,13 +207,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.7_GoLSpeedCuda" />
+        <item itemvalue="Python.2_deviceQuery" />
         <item itemvalue="Python.3.1_TimeCalc" />
         <item itemvalue="Python.7.0_ConwaysGoL" />
         <item itemvalue="Python.13.1_cuFFT_2DConvolution" />
-        <item itemvalue="Python.12.1_BrokenMatrixDebugging" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -280,11 +293,19 @@
       <workItem from="1604446317879" duration="486000" />
       <workItem from="1604449907319" duration="677000" />
       <workItem from="1604490129176" duration="228000" />
+      <workItem from="1612795524713" duration="69000" />
+      <workItem from="1613745623631" duration="1543000" />
+      <workItem from="1613828552612" duration="4625000" />
+      <workItem from="1613865776767" duration="3854000" />
+      <workItem from="1613870960776" duration="3588000" />
+      <workItem from="1613914081143" duration="1409000" />
+      <workItem from="1613955269636" duration="1675000" />
+      <workItem from="1613962490192" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -293,84 +314,49 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Inspections" timestamp="1597762575687">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1613876120674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="178" key="#Inspections/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597762575687" />
-    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601995849175">
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876120674" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="710" y="323" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601995849175" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602023416623">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602023416623" />
-    <state x="-1120" y="250" key="FileChooserDialogImpl" timestamp="1604490356761">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1120" y="250" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604490356761" />
-    <state x="628" y="171" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603242859605" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1599089685331">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597364855505" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685331" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1599089685331">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597364855505" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685331" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1599089685331">
+    <state width="1877" height="348" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1613876121791">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597364855505" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685331" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1599089685331">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121791" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597364855505" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685331" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1599089685332">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597363633516" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685332" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1599089685332">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597363633516" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685332" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1599089685332">
+    <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1612795592546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597363633516" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685331" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1599089685332">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1597363633516" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599089685332" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1602032331466">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1459" y="162" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1601857142070" />
-    <state x="461" y="162" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602032331466" />
-    <state x="480" y="224" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1" timestamp="1599360710101">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="480" y="224" key="com.intellij.execution.console.ConsoleHistoryController$MyBrowseAction$1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1599360710101" />
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1604490129170">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1604490129170" />
-    <state x="-1265" y="343" key="com.intellij.ide.util.TipDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603200870025" />
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603277434376">
-      <screen x="-1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1297" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1603277434376" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1601997090877" />
+    <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1612795592546" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Cuda$7_GoLSpeedCuda.coverage" NAME="7_GoLSpeedCuda Coverage Results" MODIFIED="1613871031127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Cuda$MatrixMultiplikation.coverage" NAME="MatrixMultiplikation Coverage Results" MODIFIED="1599069915394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Cuda$Test.coverage" NAME="Test Coverage Results" MODIFIED="1597785341021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

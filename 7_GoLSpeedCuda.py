@@ -10,80 +10,94 @@ np.set_printoptions(threshold=sys.maxsize)
 
 np.random.seed(0)
 
-ker = SourceModule("""
-#define _X  ( threadIdx.x + blockIdx.x * blockDim.x )
-#define _Y  ( threadIdx.y + blockIdx.y * blockDim.y )
+GoLKernel = SourceModule("""
+#define _X  (threadIdx.x + blockIdx.x * blockDim.x)
+#define _Y  (threadIdx.y + blockIdx.y * blockDim.y)
+#define _width  (blockDim.x * gridDim.x )
+#define _true(x)  ((x + _width) % _width )
+#define _index(x,y)  (_true(x) + _true(y) * _width)
 
-#define _WIDTH  ( blockDim.x * gridDim.x )
-#define _HEIGHT ( blockDim.y * gridDim.y  )
-
-#define _XM(x)  ( (x + _WIDTH) % _WIDTH )
-#define _YM(y)  ( (y + _HEIGHT) % _HEIGHT )
-
-#define _INDEX(x,y)  ( _XM(x)  + _YM(y) * _WIDTH )
-
-// return the number of living neighbors for a given cell
-/*
-A device function is a C function written in serial, which is called by an individual CUDA thread in kernel. 
-this little function will be called in parallel by multiple threads from our kernel
-*/                
-__device__ int nbrs(int x, int y, int * in)
+// return the number of living neighbors for a given cell                
+__device__ int nachbarn(int x, int y, int * in)
 {
-     return ( in[ _INDEX(x -1, y+1) ] + in[ _INDEX(x-1, y) ] + in[ _INDEX(x-1, y-1) ] \
-                   + in[ _INDEX(x, y+1)] + in[_INDEX(x, y - 1)] \
-                   + in[ _INDEX(x+1, y+1) ] + in[ _INDEX(x+1, y) ] + in[ _INDEX(x+1, y-1) ] );
+     return ( in[_index(x -1, y+1)] + in[_index(x-1, y)] + in[_index(x-1, y-1)] \
+                   + in[_index(x, y+1)] + in[_index(x, y - 1)] \
+                   + in[_index(x+1, y+1)] + in[_index(x+1, y)] + in[_index(x+1, y-1)]);
 }
 
-
-
-__global__ void conway_ker(int * lattice_out, int * lattice  )
+__global__ void gameoflife(int * grid_out, int * grid)
 {
-   // x, y are the appropriate values for the cell covered by this thread
    int x = _X, y = _Y;
 
-   // count the number of neighbors around the current cell
-   int n = nbrs(x, y, lattice);
+   int n = nachbarn(x, y, grid);
 
-
-    // if the current cell is alive, then determine if it lives or dies for the next generation.
-    if ( lattice[_INDEX(x,y)] == 1)
-       switch(n)
-       {
-          // if the cell is alive: it remains alive only if it has 2 or 3 neighbors.
-          case 2:
-          case 3: lattice_out[_INDEX(x,y)] = 1;
-                  break;
-          default: lattice_out[_INDEX(x,y)] = 0;                   
-       }
-    else if( lattice[_INDEX(x,y)] == 0 )
-         switch(n)
-         {
-            // a dead cell comes to life only if it has 3 neighbors that are alive.
-            case 3: lattice_out[_INDEX(x,y)] = 1;
-                    break;
-            default: lattice_out[_INDEX(x,y)] = 0;         
-         }
+    if (grid[_index(x,y)] == 1) {
+        if (n == 2 || n == 3)  {
+            grid_out[_index(x,y)] = 1;
+        }
+        else {
+            grid_out[_index(x,y)] = 0;
+        }
+    }
+    else if( grid[_index(x,y)] == 0 )
+         if (n == 3)  {
+            grid_out[_index(x,y)] = 1;
+        }
+        else {
+            grid_out[_index(x,y)] = 0;
+        }
 
 }
 """)
 
-conway_ker = ker.get_function("conway_ker")
+gameoflife = GoLKernel.get_function("gameoflife")
 
-
-t_start = time()
-
+X = [32, 64, 128, 256, 512, 1024, 2048]
+Y = [1024, 2048, 4096, 8192, 16384]
 iterations = 20
-N = 16384
+numDurchf = 20
+
+for z in Y:
+    Time = 0
+    N = z
+    print("Durchfuehrung mit Arraygroesse: " + str(N))
+    for i in range(numDurchf):
+        t_start = time()
+        grid = np.int32(np.random.choice([1, 0], N * N, p=[0.25, 0.75]).reshape(N, N))
+        grid_gpu = gpuarray.to_gpu(grid)
+        emptygrid_gpu = gpuarray.empty_like(grid_gpu)
+        for i in range(iterations):
+            gameoflife(emptygrid_gpu, grid_gpu, block=(32, 32, 1), grid=(N/32, N/32, 1))
+            grid_gpu[:] = emptygrid_gpu[:]
+        grid = grid_gpu.get()
+        t_end = time()
+        Time += t_end - t_start
+    print("end")
+    print('Total time: %fs' % (Time / numDurchf))
+
+
+"""
 print("started with gridsize " + str(N) + " and " + str(iterations) + " iterations")
 grid = np.int32(np.random.choice([1, 0], N * N, p=[0.25, 0.75]).reshape(N, N))
 grid_gpu = gpuarray.to_gpu(grid)
-newgrid_gpu = gpuarray.empty_like(grid_gpu)
+emptygrid_gpu = gpuarray.empty_like(grid_gpu)
 
 #print(grid)
 
+X = 32
+Y = N/32
+
+if N < X:
+    X = N
+    Y = 1
+else:
+    if N % 32 != 0:
+        raise Exception("N sollte ein vielfaches von 32 sein, sonst muss der Kernel manuell konfiguriert werden!")
+
+
 for i in range(iterations):
-    conway_ker(newgrid_gpu, grid_gpu, block=(32, 32, 1), grid=(N / 32, N / 32, 1))
-    grid_gpu[:] = newgrid_gpu[:]
+    gameoflife(emptygrid_gpu, grid_gpu, block=(X, X, 1), grid=(Y, Y, 1))
+    grid_gpu[:] = emptygrid_gpu[:]
 
 grid = grid_gpu.get()
 #print(grid)
@@ -92,7 +106,7 @@ t_end = time()
 
 print("end")
 print ('Total time: %fs' % (t_end - t_start))
-
+"""
 """
 mit Precompiling
 
