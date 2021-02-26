@@ -10,7 +10,7 @@ np.set_printoptions(threshold=sys.maxsize)
 
 np.random.seed(0)
 
-GoLKernel = SourceModule("""
+GoL = SourceModule("""
 #define _X  (threadIdx.x + blockIdx.x * blockDim.x)
 #define _Y  (threadIdx.y + blockIdx.y * blockDim.y)
 #define _width  (blockDim.x * gridDim.x )
@@ -18,7 +18,7 @@ GoLKernel = SourceModule("""
 #define _index(x,y)  (_true(x) + _true(y) * _width)
 
 // return the number of living neighbors for a given cell                
-__device__ int nachbarn(int x, int y, int * in)
+__device__ int neighbors(int x, int y, int * in)
 {
      return ( in[_index(x -1, y+1)] + in[_index(x-1, y)] + in[_index(x-1, y-1)] \
                    + in[_index(x, y+1)] + in[_index(x, y - 1)] \
@@ -29,7 +29,7 @@ __global__ void gameoflife(int * grid_out, int * grid)
 {
    int x = _X, y = _Y;
 
-   int n = nachbarn(x, y, grid);
+   int n = neighbors(x, y, grid);
 
     if (grid[_index(x,y)] == 1) {
         if (n == 2 || n == 3)  {
@@ -50,7 +50,7 @@ __global__ void gameoflife(int * grid_out, int * grid)
 }
 """)
 
-gameoflife = GoLKernel.get_function("gameoflife")
+gameoflife = GoL.get_function("gameoflife")
 
 X = [32, 64, 128, 256, 512, 1024, 2048]
 Y = [1024, 2048, 4096, 8192, 16384]

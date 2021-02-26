@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="437d6385-1429-4b52-9e67-fa42fc4e73f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7.0_ConwaysGoL.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.0_ConwaysGoL.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/7_GoLSpeedCuda.py" beforeDir="false" afterPath="$PROJECT_DIR$/7_GoLSpeedCuda.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/CudaDecisionTrees.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/cpu_impl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/base_tree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/datasource.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/random_forest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/random_tree.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/cudatree/util.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CudaRF/data_cars.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfLife/board.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfLife/cell.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfLife/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,6 +289,7 @@
       <workItem from="1613914081143" duration="1409000" />
       <workItem from="1613955269636" duration="1675000" />
       <workItem from="1613962490192" duration="11000" />
+      <workItem from="1614356872013" duration="889000" />
     </task>
     <servers />
   </component>
