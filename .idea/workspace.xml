@@ -44,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bachelorarbeit" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,7 +59,7 @@
       <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda\CudaRF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.7_GoLSpeedCuda">
+  <component name="RunManager" selected="Python.2_deviceQuery">
     <configuration name="13.1_cuFFT_2DConvolution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,8 +194,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.7_GoLSpeedCuda" />
         <item itemvalue="Python.2_deviceQuery" />
+        <item itemvalue="Python.7_GoLSpeedCuda" />
         <item itemvalue="Python.3.1_TimeCalc" />
         <item itemvalue="Python.7.0_ConwaysGoL" />
         <item itemvalue="Python.13.1_cuFFT_2DConvolution" />
@@ -290,6 +290,12 @@
       <workItem from="1613955269636" duration="1675000" />
       <workItem from="1613962490192" duration="11000" />
       <workItem from="1614356872013" duration="889000" />
+      <workItem from="1614894221563" duration="13000" />
+      <workItem from="1615078725184" duration="2232000" />
+      <workItem from="1615125807174" duration="14000" />
+      <workItem from="1615160384680" duration="224000" />
+      <workItem from="1615167301993" duration="1070000" />
+      <workItem from="1615169657795" duration="27000" />
     </task>
     <servers />
   </component>
@@ -303,10 +309,11 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1613876120674">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1615169682907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876120674" />
+    <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1614894232845" />
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615169682907" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1613876121790">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

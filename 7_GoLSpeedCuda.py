@@ -13,8 +13,8 @@ np.random.seed(0)
 GoL = SourceModule("""
 #define _X  (threadIdx.x + blockIdx.x * blockDim.x)
 #define _Y  (threadIdx.y + blockIdx.y * blockDim.y)
-#define _width  (blockDim.x * gridDim.x )
-#define _true(x)  ((x + _width) % _width )
+#define _width  (blockDim.x * gridDim.x)
+#define _true(x)  ((x + _width) % _width)
 #define _index(x,y)  (_true(x) + _true(y) * _width)
 
 // return the number of living neighbors for a given cell                
@@ -76,45 +76,3 @@ for z in Y:
     print('Total time: %fs' % (Time / numDurchf))
 
 
-"""
-print("started with gridsize " + str(N) + " and " + str(iterations) + " iterations")
-grid = np.int32(np.random.choice([1, 0], N * N, p=[0.25, 0.75]).reshape(N, N))
-grid_gpu = gpuarray.to_gpu(grid)
-emptygrid_gpu = gpuarray.empty_like(grid_gpu)
-
-#print(grid)
-
-X = 32
-Y = N/32
-
-if N < X:
-    X = N
-    Y = 1
-else:
-    if N % 32 != 0:
-        raise Exception("N sollte ein vielfaches von 32 sein, sonst muss der Kernel manuell konfiguriert werden!")
-
-
-for i in range(iterations):
-    gameoflife(emptygrid_gpu, grid_gpu, block=(X, X, 1), grid=(Y, Y, 1))
-    grid_gpu[:] = emptygrid_gpu[:]
-
-grid = grid_gpu.get()
-#print(grid)
-
-t_end = time()
-
-print("end")
-print ('Total time: %fs' % (t_end - t_start))
-"""
-"""
-mit Precompiling
-
-iterations = 1
-N = 256
-Total time: 0.003000s
-
-iterations = 200
-N = 256
-Total time: 0.014000s
-"""
