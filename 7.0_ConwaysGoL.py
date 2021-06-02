@@ -134,6 +134,9 @@ def update_gpu(frameNum, img, newLattice_gpu, lattice_gpu, N):
 
     return img
 
+def onClick(event):
+    global pause
+    pause ^= True
 
 if __name__ == '__main__':
     # set lattice size (has to be a multiple of 32 with our Setup, look @grid)

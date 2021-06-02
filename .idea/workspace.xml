@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="437d6385-1429-4b52-9e67-fa42fc4e73f0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7_GoLSpeedCuda.py" beforeDir="false" afterPath="$PROJECT_DIR$/7_GoLSpeedCuda.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7.0_ConwaysGoL.py" beforeDir="false" afterPath="$PROJECT_DIR$/7.0_ConwaysGoL.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bachelorarbeit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -59,7 +60,7 @@
       <recent name="C:\Users\JonasJuenemann\Documents\GitHub\Cuda\CudaRF" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.2_deviceQuery">
+  <component name="RunManager" selected="Python.7.0_ConwaysGoL">
     <configuration name="13.1_cuFFT_2DConvolution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Cuda" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,10 +195,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.7.0_ConwaysGoL" />
         <item itemvalue="Python.2_deviceQuery" />
         <item itemvalue="Python.7_GoLSpeedCuda" />
         <item itemvalue="Python.3.1_TimeCalc" />
-        <item itemvalue="Python.7.0_ConwaysGoL" />
         <item itemvalue="Python.13.1_cuFFT_2DConvolution" />
       </list>
     </recent_temporary>
@@ -296,6 +297,9 @@
       <workItem from="1615160384680" duration="224000" />
       <workItem from="1615167301993" duration="1070000" />
       <workItem from="1615169657795" duration="27000" />
+      <workItem from="1622586903672" duration="2699000" />
+      <workItem from="1622630016995" duration="11000" />
+      <workItem from="1622632757838" duration="29000" />
     </task>
     <servers />
   </component>
@@ -308,52 +312,9 @@
       <path value="$PROJECT_DIR$/Literatur" />
     </ignored-roots>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1615169682907">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="-1180" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1614894232845" />
-    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615169682907" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1613876121791">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121791" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1613876121790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613876121790" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1612795592546">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1612795592546" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Cuda$7_GoLSpeedCuda.coverage" NAME="7_GoLSpeedCuda Coverage Results" MODIFIED="1613871031127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Cuda$MatrixMultiplikation.coverage" NAME="MatrixMultiplikation Coverage Results" MODIFIED="1599069915394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Cuda$Test.coverage" NAME="Test Coverage Results" MODIFIED="1597785341021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Cuda$7_GoLSpeedCuda.coverage" NAME="7_GoLSpeedCuda Coverage Results" MODIFIED="1613871031127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
